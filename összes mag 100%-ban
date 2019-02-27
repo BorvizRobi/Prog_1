@@ -1,19 +1,9 @@
-#include<pthread.h>
-
-
-pthread_t id;
-
-void* vegtelen(void *arg)
-{
-
-for(;;);
-
-}
-
-int main(void)
-{
-	
-    for(;;)
-        pthread_create(&id, NULL, &vegtelen, NULL);
-
-}
+	   int
+	   main ()
+	   {
+	   #pragma omp parallel 
+  	    {                 
+  	    for (;;);         
+  	    }
+  	   return 0;
+ 	   }
